@@ -22,7 +22,7 @@
 
 ## 编译
 
-在你的计算机系统中需要安装[Node.js](https://nodejs.org)来编译这个程序。omputer in order to build this app.
+在你的计算机系统中需要安装[Node.js](https://nodejs.org)来编译这个程序。
 
 ```bash
 $ git clone https://github.com/electron/electron-api-demos
@@ -31,9 +31,9 @@ $ npm install
 $ npm start
 ```
 
-如果你不想clone，你可以从[下载源代码](https://github.com/electron/electron-api-demos/archive/master.zip)。
+如果你不想clone，你可以[下载源代码](https://github.com/electron/electron-api-demos/archive/master.zip)。
 
-为了容易的开发，你可以在打开有开发工具栏全屏模式:
+为了便于开发，你可以打开有开发工具栏的全屏模式:
 
 ```bash
 $ npm run dev
