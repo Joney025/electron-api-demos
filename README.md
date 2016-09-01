@@ -1,4 +1,4 @@
-# <img src="https://cloud.githubusercontent.com/assets/378023/15172388/b2b81950-1790-11e6-9a7c-ccc39912bb3a.png" width="60px" align="center" alt="Electron API Demos icon"> Electron API Demos
+# <img src="https://cloud.githubusercontent.com/assets/378023/15172388/b2b81950-1790-11e6-9a7c-ccc39912bb3a.png" width="60px" align="center" alt="Electron API Demos icon"> Electron API演示
 
 [![Build Status](https://travis-ci.org/electron/electron-api-demos.svg?branch=master)](https://travis-ci.org/electron/electron-api-demos)
 [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com)
@@ -11,8 +11,8 @@
 
 ---
 
-这个项目坚持部队派遣国公约守则。通过参与，您预计将秉承此代码。请向 electron@github com。
-这个项目遵照贡献守则[代码约定](CODE_OF_CONDUCT.md)。所有贡献者均需秉承此守则。向electron@github.com 报告不可接受的行为。
+
+这个项目遵照[代码贡献守则](CODE_OF_CONDUCT.md)。所有贡献者均需秉承此守则。向electron@github.com 报告不可接受的行为。
 
 在twitter上关注[@ElectronJS](https://twitter.com/electronjs)的重要公告。访问[electron主页](http://electron.atom.io)网站。
 

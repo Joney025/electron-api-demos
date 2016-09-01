@@ -19,6 +19,6 @@
 
 本守则适用于项目空间和通过该项目个人或社区的公开空间。
 
-辱骂、 骚扰或其他不可接受的行为可报告给项目的维护者[electron@github。com] (mailto:electron @github。com)。所有投诉都将审查和调查，并在必要和适当情况下做出反应。维护人员有义务保护报告者的隐私。
+辱骂、 骚扰或其他不可接受的行为可报告给项目的维护者[electron@github.com] (mailto:electron@github.com)。所有投诉都将审查和调查，并在必要和适当情况下做出反应。维护人员有义务保护报告者的隐私。
 
 此行为守则改变自http://contributor-covenant.org/version/1/3/0/ （版本为1.3.0）
