@@ -1,112 +1,111 @@
-# Documentation
+# 文档
 
-This app has been developed to be a lightweight Electron app, demonstrating how to create a basic Electron app with a few exceptions that have been made for the sake of code organization in regards to the demos themselves.
+这个程序作为轻量的Electron程序被开发，除了少量的由代码组织做出的问候自身的代码外，将演示如何创建基本的Electron程序。
 
-All of the sample code shown in the app _is the actual code used in the app_. These JavaScript bits have been pulled out into their own file and organized by process (main or renderer) and then by section (communication, menus, native UI, media, system, windows).
+程序中显示的所有例子代码都_是程序中实际执行的代码_。这些 文件被放置到它们自己文件中，并组织到对应章节(通讯、菜单、原生用户接口、媒体、系统和窗口)的进程(主进程或者处理进程)中。 
 
-This was done for maintainability—code updates only have to be made in one place—and organization—it's easy to find the sample code you're looking for.
+这样做是为了方便代码维护——代码只需要在一个地方更新——也可以方便的组织和查找。
 
-All of the pages (or views) are separate `.html` files which are appended onto the `index.html` using [HTML imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/).
+所有的页面(或称为 视图)都是`.html`文件，使用[HTML imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/)把它们添加到`index.html`中。
 
-Are you looking to add a demo? Jump to the [add a new demo section](#add-a-section-or-demo).
+你想了解如何添加演示？跳到[添加新的演示章节](#添加章节或演示).
 
-## Folder Structure
+## 目录结构
 
-![Diagram of App Structure and Operations](/assets/img/diagram.png)
+![程序结构和操作框图](/assets/img/diagram.png)
 
 #### `assets`
-This directory contains assets for the app itself: CSS, fonts, images and shared JavaScript libraries or helpers.
+这个目录包括所有程序自身的资源: CSS文件, 字体文件, 图片 和共享的JavaScript库或者帮助。
 
 #### `main-process`
-This directory contains sub folders for each demo section that requires JavaScript in the main process. This structure is mirrored in the `renderer-process` directory.
+这个目录的子目录是每个演示章节主进程需要的JavaScript文件。它的结构与`renderer-process`目录镜像。
 
-The `main.js` file, located in the root, takes each `.js` file in these directories and executes them.
+`main.js`文件放置在项目根目录，会获取目录下每个`.js`文件并执行它们。
 
 #### `renderer-process`
-This directory contains sub folders for each demo section that requires JavaScript in the renderer process. This structure is mirrored in the `main-process` directory.
+这个目录包含的子目录是每个演示章节处理进程需要的JavaScript文件。它的结构和`main-process`镜像。
 
-Each of the HTML page views requires the corresponding renderer-process `.js` files that it needs for its demo.
+演示的每个HTML页面视图请求对应的renderer-process目录下`.js`文件。
 
-Each page view reads the content of its relevant main and renderer process files and adds them to the page for the snippets.
+每个页面视图读取它关联的主进程和处理进程文件，并作为片段添加到(代码)页面中。
 
 #### `sections`
-This directory contains sub folders for each demo section. These subfolders contain the HTML files for each of the demo pages. Each of these files is appended to `index.html`, located at the root.
+这个目录的子目录对应于每个演示章节。这些子目录包括了每个演示页面需要的HTML文件。它们会添加到根目录下的`index.html`中。
 
 #### `index.html`
-This is the main view in the app. It contains the sidebar with navigation and uses [HTML imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/) to append each section HTML page to the `body`.
-
+是程序的主要视图。它包括一个导航条和使用[HTML imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/)添加到`body`的章节HTML页面。
 #### `main.js`
-This file contains the lifecycle instructions for the app like how to start and quit, it is the app's main process. It grabs every `.js` file in the `main-process` directory and executes.
+这个文件提供程序生命周期实例，如如何开始和退出，它是程序的主进程。它会链接到`main-process`目录下的每个`.js`文件并执行。
 
-The `package.json` sets this file as the `main` file.
+在`package.json`中设置其作为主要(`main`)文件。
 
 #### `package.json`
-This file is required when using `npm` and Electron.js. It contains details on the app: the author, dependencies, repository and points to `main.js` as the application's main process file.
+这个文件是`npm`和Electron.js必须的。它提供关于程序的描述信息: author, dependencies, repository 和指向`main.js`来作为程序主进程文件
 
 #### Docs
-The files: `CODE_OF_CONDUCT`, `README`, `docs` and `CONTRIBUTING` files make up the documentation for the project.
+文件: `CODE_OF_CONDUCT`, `README`, `docs` 和 `CONTRIBUTING` 等，是这个项目的文档。
 
-## UI Terminology
+## UI术语
 
-![UI Terminology](/assets/img/ui-terminology.png)
+![UI术语](/assets/img/ui-terminology.png)
 
-## CSS Naming Convention
+## CSS命名约定
 
-Nothing too strict and used more as a guide:
+没有什么过于严格要求和更多指南:
 
-- Styling elements directly should be avoided, but ok in some cases. Like `<p>` or `<code>`.
-- Elements that belong together are prefixed with their parent class. `.section`, `.section-header`, `.section-icon`.
-- States use `is-` prefix
-- Utilities use `u-` prefix
+- 需要避免直接对元素设置样式，不过也有例外，如`<p>`或者`<code>`。
+- 属于一起的元素均以其父类作为前缀。 `.section`, `.section-header`, `.section-icon`.
+- 状态使用`is-`前缀。
+- 公共的使用`u-`前缀。
 
-## Add a Section or Demo
+## 添加章节或演示
 
-Here are tips for covering the bases when adding a new section or demo. General tip—for some of these just copy the line or file of a similar existing item to get started!
+这里是一些添加新章节或演示的提示。常规提示——它们一般仅仅是复制了类似存在项目中的一行或者文件即开始!
 
-### New Section
+### 新章节
 
-A whole new page with one or more demos.
+一个或者多个演示需要一个完整的新页
 
 #### index.html
 
-This page contains the sidebar list of sections as well as each section template that is imported with HTML imports.
+这个页面包含章节列表边栏以及通过HTML imports引入的每个章节模板。
 
-- Add demo to sidebar in the appropriate category in `index.html`
- - update `id` i.e. `id="button-dialogs"`
- - update `data-section` i.e. `data-section="dialogs"`
-- Add demo template path to the import links in the `head` of `index.html`
- - i.e. `<link rel="import" href="sections/native-ui/dialogs.html">`
+- 添加演示到`index.html`边栏的适当分类下
+ - 更新 `id` 例如 `id="button-dialogs"`
+ - 更新 `data-section` 例如`data-section="dialogs"`
+- 添加演示模板路径到`index.html`的`head`的import链接部分 
+ - 例如 `<link rel="import" href="sections/native-ui/dialogs.html">`
 
-#### Template
+#### 模板
 
-This template is added to the `index.html` in the app.
+模板被添加进程序的`index.html`。
 
-- In the `sections` directory, copy an existing template `html` file from the category you're adding a section to.
-- Update these tags `id`
- - i.e. `id="dialogs-section"`
-- Update all the text in the `header` tag with text relevant to your new section.
- - Remove the demos and pro-tips as needed.
+- 在`sections`目录下，从你添加章节分类中复制一个存在的`html`模板文件
+- 更新它们的`id`
+ - 例如`id="dialogs-section"`
+- 更新所有`header`标签中的文字为你新章节相关内容
+ - 根据演示需要添加或者移除专业提示
 
-### Demo
+### 演示
 
-Any code that you create for your demo should be added to the 'main-process' or 'renderer-process' directories depending on where it runs.
+任何你演示需要的代码均需要正确放置到'main-process'或者'renderer-process'目录中运行位置下
 
-All JavaScript files within the 'main-process' directory are run when the app starts but you'll link to the file so that it is displayed within your demo (see below).
+所有需要在程序开始时运行但不需要显示在你的演示中的JavaScript文件放置在'main-process'目录下(见后说明)。
 
-The renderer process code you add will be read and displayed within the demo and then required on the template page so that it runs in that process (see below).
+处理进程代码是演示中需要读取和显示的，因为会在模板页面中请求，所以它们运行在处理进程中(见后说明)。
 
-- Start by copying and pasting an existing `<div class="demo">` blocks from the template page.
-- Update the demo button `id`
- - i.e `<button class="demo-button" id="information-dialog">View Demo</button>`
-- If demo includes a response written to the DOM, update that `id`, otherwise delete:
- - i.e. `<span class="demo-response" id="info-selection"></span>`
-- Update the text describing your demo.
-- If you are displaying main or renderer process sample code, include or remove that markup accordingly.
- - Sample code is read and added to the DOM by adding the path to the code in the `data-path`
-   - i.e. `<pre><code data-path="renderer-process/native-ui/dialogs/information.js"></pre></code>`
- - Require your render process code in the script tag at the bottom of the template
-   - i.e  `require('./renderer-process/native-ui/dialogs/information')`
+- 从模板页面`<div class="demo">`部分复制和粘贴存的。
+- 更新演示按钮`id`
+ - 例如 `<button class="demo-button" id="information-dialog">观看演示</button>`
+- 如果演示包括对DOM写入的请求，则更新`id`，否则删除掉:
+ - 例如 `<span class="demo-response" id="info-selection"></span>`
+- 更新你演示的文本描述。
+- 如果你显示主进程或者处理进程样例代码，则包括或者移除对应标签
+ - 样例代码通过`data-path`附加的路径信息读取并添加到DOM
+   - 例如 `<pre><code data-path="renderer-process/native-ui/dialogs/information.js"></pre></code>`
+ - 在模板的脚本标签中请求你的处理进程代码
+   - 例如  `require('./renderer-process/native-ui/dialogs/information')`
 
-#### Try it out
+#### 尝试一下
 
-At this point you should be able to run the app, `npm start`, and see you section and/or demo. :tada:
+至此，你应该可以运行程序了，执行`npm start`并且观看你的章节和/或者 演示。:tada:

@@ -3,28 +3,26 @@
 [![Build Status](https://travis-ci.org/electron/electron-api-demos.svg?branch=master)](https://travis-ci.org/electron/electron-api-demos)
 [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com)
 
-This is a desktop app that interactively and with sample code demonstrates core features of the [Electron](http://electron.atom.io) API. It's built with Electron, too, of course. This app works on Windows, OS X and Linux operating systems.
+这是一个桌面程序，它以交互的方式演示如何使用[Electron](http://electron.atom.io) API核心功能。这个程序采用Electron创建，当然，它可以工作在Windows, OS X和Linux等操作系统上。
 
-Use this app to see what you can do with Electron and use the source code to learn how to create a basic Electron app.
+通过这个程序，你将了解到Electron是如何工作的，并通过源代码学习如何创建基本的Electron程序。
 
 ![Electron API Demos Screenshots](https://cloud.githubusercontent.com/assets/378023/15016148/ae06cc80-124a-11e6-80dd-076d83e492f6.png)
 
 ---
 
-This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDUCT.md).
-By participating, you are expected to uphold this code. Please report unacceptable
-behavior to electron@github.com.
+这个项目坚持部队派遣国公约守则。通过参与，您预计将秉承此代码。请向 electron@github com。
+这个项目遵照贡献守则[代码约定](CODE_OF_CONDUCT.md)。所有贡献者均需秉承此守则。向electron@github.com 报告不可接受的行为。
 
-Follow [@ElectronJS](https://twitter.com/electronjs) on Twitter for important
-announcements. Visit the [electron website](http://electron.atom.io).
+在twitter上关注[@ElectronJS](https://twitter.com/electronjs)的重要公告。访问[electron主页](http://electron.atom.io)网站。
 
-## Using
+## 使用
 
-You can [download the latest release](https://github.com/electron/electron-api-demos/releases) for your operating system or build it yourself (see below).
+你可以为你的操作系统[下载最新发布](https://github.com/electron/electron-api-demos/releases)并且自行编译（见下）。
 
-## Building
+## 编译
 
-You'll need [Node.js](https://nodejs.org) installed on your computer in order to build this app.
+在你的计算机系统中需要安装[Node.js](https://nodejs.org)来编译这个程序。omputer in order to build this app.
 
 ```bash
 $ git clone https://github.com/electron/electron-api-demos
@@ -33,14 +31,14 @@ $ npm install
 $ npm start
 ```
 
-If you don't wish to clone, you can [download the source code](https://github.com/electron/electron-api-demos/archive/master.zip).
+如果你不想clone，你可以从[下载源代码](https://github.com/electron/electron-api-demos/archive/master.zip)。
 
-For easier developing you can launch the app in fullscreen with DevTools open:
+为了容易的开发，你可以在打开有开发工具栏全屏模式:
 
 ```bash
 $ npm run dev
 ```
 
-## Extending
+## 延伸
 
- [Read the docs](docs.md) to learn more about how this app is built or how to [add a new demo](docs.md#add-a-section-or-demo).
+ [阅读文档](docs.md)来学习如何编译或者[添加新演示](docs.md#添加新的演示章节)。
