@@ -12,12 +12,12 @@ invisMsgBtn.addEventListener('click', function (clickEvent) {
   win.loadURL(invisPath)
 
   win.webContents.on('did-finish-load', function () {
-    const input = 100
+    const input = 10
     win.webContents.send('compute-factorial', input, windowID)
   })
 })
 
 ipcRenderer.on('factorial-computed', function (event, input, output) {
-  const message = `The factorial of ${input} is ${output}`
+  const message = `${input}的阶乘是${output}`
   invisReply.textContent = message
 })

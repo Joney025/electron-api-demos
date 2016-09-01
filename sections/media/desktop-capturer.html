@@ -4,27 +4,27 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-media"></use></svg>
-          Take a screenshot
+          获取屏幕截图
         </h1>
-        <h3>The <code>desktopCapturer</code> module in Electron can be used to access any media, such as audio, video, screen and window, that is available through the <code>getUserMedia</code> web API in Chromium.</h3>
+        <h3>Electron的<code>desktopCapturer</code>模块可以用于访问任何媒体，如音频、视频、屏幕和窗口，它是通过Chromium中的<code>getUserMedia</code>API起效的。</h3>
 
-        <p>Open the <a href="http://electron.atom.io/docs/api/desktop-capturer">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+        <p>观看<a href="http://electron.atom.io/docs/api/desktop-capturer">完整API文档<span class="u-visible-to-screen-reader">(在新窗口打开)</span></a>了解更多。</p>
       </div>
     </header>
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="print-pdf-demo-toggle" class="js-container-target demo-toggle-button">Take a Screenshot
-          <div class="demo-meta u-avoid-clicks">Supports: Win, OS X, Linux | Process: Renderer</div>
+        <button id="print-pdf-demo-toggle" class="js-container-target demo-toggle-button">获取屏幕截图
+          <div class="demo-meta u-avoid-clicks">支持: Win, OS X, Linux | 进程: Renderer</div>
         </button>
         <div class="demo-box">
           <div class="demo-controls">
-            <button class="demo-button" id="screen-shot">View Demo</button>
+            <button class="demo-button" id="screen-shot">观看演示</button>
             <span class="demo-response is-selectable" id="screenshot-path"></span>
           </div>
-          <p>This demo uses the <code>desktopCapturer</code> module to gather screens in use and select the entire screen and take a snapshot of what is visible.</p>
-          <p>Clicking the demo button will take a screenshot of your current screen and open it in your default viewer.</p>
-          <h5>Renderer Process</h5>
+          <p>这个演示使用<code>desktopCapturer</code>模块来获取整个屏幕的选择区域可见部分，并生成一个快照。</p>
+          <p>点击'观看演示'按钮将获取当前屏幕为一张快照，并且显示在默认查看器中。</p>
+          <h5>处理进程</h5>
           <pre><code data-path="renderer-process/media/desktop-capturer.js"></pre></code>
         </div>
       </div>

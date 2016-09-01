@@ -11,7 +11,7 @@ const screenshot = document.getElementById('screen-shot')
 const screenshotMsg = document.getElementById('screenshot-path')
 
 screenshot.addEventListener('click', function (event) {
-  screenshotMsg.textContent = 'Gathering screens...'
+  screenshotMsg.textContent = '采集屏幕...'
   const thumbSize = determineScreenShotSize()
   let options = { types: ['screen'], thumbnailSize: thumbSize }
 
@@ -25,7 +25,7 @@ screenshot.addEventListener('click', function (event) {
         fs.writeFile(screenshotPath, source.thumbnail.toPng(), function (error) {
           if (error) return console.log(error)
           shell.openExternal('file://' + screenshotPath)
-          const message = `Saved screenshot to: ${screenshotPath}`
+          const message = `保存屏幕截图到: ${screenshotPath}`
           screenshotMsg.textContent = message
         })
       }

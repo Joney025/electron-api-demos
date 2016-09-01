@@ -4,35 +4,35 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-media"></use></svg>
-          Print to PDF
+          打印输出PDF
         </h1>
-        <h3>The <code>browser window</code> module in Electron has a property, <code>webContents</code>, which allows your app to print as well as print to PDF.</h3>
+        <h3>Electron的<code>browser window</code> 模块有一个属性 <code>webContents</code>，它允许你的程序把它作为可打印的PDF进行打印。</h3>
 
-        <p>Open the <a href="http://electron.atom.io/docs/api/web-contents/#webcontentsprintoptions">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+        <p>观看<a href="http://electron.atom.io/docs/api/web-contents/#webcontentsprintoptions">完整API文档<span class="u-visible-to-screen-reader">(在新窗口打开)</span></a> 了解更多。</p>
       </div>
     </header>
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="print-pdf-demo-toggle" class="js-container-target demo-toggle-button">Print to PDF
-          <div class="demo-meta u-avoid-clicks">Supports: Win, OS X, Linux</div>
+        <button id="print-pdf-demo-toggle" class="js-container-target demo-toggle-button">打印输出PDF
+          <div class="demo-meta u-avoid-clicks">支持: Win, OS X, Linux</div>
         </button>
         <div class="demo-box">
           <div class="demo-controls">
-            <button class="demo-button" id="print-pdf">View Demo</button>
+            <button class="demo-button" id="print-pdf">观看演示</button>
             <span class="demo-response is-selectable" id="pdf-path"></span>
           </div>
-          <p>To demonstrate the print to PDF functionality, the demo button above will save this page as a PDF and, if you have a PDF viewer, open the file.</p>
-          <p>In a real-world application you're more likely to add this to application menu, but for the purposes of the demo we've set it to the demo button.</p>
-          <h5>Renderer Process</h5>
+          <p>为了演示打印输出PDF功能，上面的'观看演示'按钮将以PDF保存这个页面，如果你有PDF浏览器，将会打开文件。</p>
+          <p>在真实的程序中，它通常需要添加到程序菜单中，但为了演示的目的，我们把它设置到演示按钮上。</p>
+          <h5>处理进程</h5>
           <pre><code data-path="renderer-process/media/pdf.js"></pre></code>
-          <h5>Main Process</h5>
+          <h5>主进程</h5>
           <pre><code data-path="main-process/media/pdf.js"></code></pre>
 
           <div class="demo-protip">
-            <h2>ProTip</h2>
-            <strong>Use a print style sheet.</strong>
-            <p>You can create a stylesheet targeting printing to optimize the look of what your users print. Below is the stylesheet used in this app, located in <code>assets/css/print.css</code>.</p>
+            <h2>专业提示</h2>           bab
+            <strong>使用打印样式表单</strong>
+            <p>你可以专门为打印创建一个定制的表单样式使得打印效果更好。下面的样式用于这个程序，其放置在<code>assets/css/print.css</code>.</p>
             <pre><code data-path="assets/css/print.css"></code></pre>
           </div>
         </div>

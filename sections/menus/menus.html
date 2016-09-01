@@ -4,37 +4,37 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-menu"></use></svg>
-          Customize Menus
+          定制菜单
         </h1>
-        <h3>The <code>Menu</code> and <code>MenuItem</code> modules can be used to create custom native menus.</h3>
+        <h3>菜单(<code>Menu</code>)和菜单项(<code>MenuItem</code>)模块可以用于创建定制的原生菜单。</h3>
 
-        <p>There are two kinds of menus: the application (top) menu and context (right-click) menu.</p>
+        <p>它包括两种类型的菜单: 程序(顶部/top)菜单和关联(右键/right-click)菜单。</p>
 
-        <p>Open the <a href="http://electron.atom.io/docs/api/menu">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+        <p>在你的浏览器中打开<a href="http://electron.atom.io/docs/api/menu">完整API文档<span class="u-visible-to-screen-reader">(在新窗口打开)</span></a>以了解更多。</p>
       </div>
     </header>
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="application-menu-demo-toggle" class="js-container-target demo-toggle-button">Create an application menu
-          <div class="demo-meta u-avoid-clicks">Supports: Win, OS X, Linux <span class="demo-meta-divider">|</span> Process: Main</div>
+        <button id="application-menu-demo-toggle" class="js-container-target demo-toggle-button">创建程序菜单
+          <div class="demo-meta u-avoid-clicks">支持: Win, OS X, Linux <span class="demo-meta-divider">|</span> 进程: Main</div>
         </button>
         <div class="demo-box">
-          <p>The <code>Menu</code> and <code>MenuItem</code> modules allow you to customize your application menu. If you don't set any menu, Electron will generate a minimal menu for your app by default.</p>
+          <p><code>Menu</code>和<code>MenuItem</code>模块允许你定制你的程序菜单。如果你没有定义任何菜单，则Electron会自动产生一个默认的最小的菜单。</p>
 
-          <p>This app uses the code below to set the application menu. If you click the 'View' option in the application menu and then the 'App Menu Demo', you'll see an information box displayed.</p>
-          <h5>Main Process</h5>
+          <p>这个程序使用下面的代码设置了程序菜单。如果你点击'查看'项目下的'程序菜单演示'项，你将看到一个信息对话框。</p>
+          <h5>主进程</h5>
           <pre><code data-path="main-process/menus/application-menu.js"></code></pre>
 
           <div class="demo-protip">
-            <h2>ProTip</h2>
-            <strong>Know operating system menu differences.</strong>
-            <p>When designing an app for multiple operating systems it's important to be mindful of the ways application menu conventions differ on each operating system.</p>
-            <p>For instance, on Windows, accelerators are set with an <code>&</code>. Naming conventions also vary, like between "Settings" or "Preferences". Below are resources for learning operating system specific standards.</p>
+            <h2>专业提示</h2>
+            <strong>了解操作系统菜单的不同</strong>
+            <p>当设计一个适于多操作系统的程序时，了解如何以最小的代价来完成不同系统程序菜单的转换是十分重要的。</p>
+            <p>例如，在Windows中,可以通过<code>&</code>来转换某字符定义一个快捷键。命名转换也非常灵活，例如"&Settings"或者"&Preferences"。下面的资源可以帮助了解不同操作系统直接定义规范的差异。</p>
             <ul>
-              <li><a href="https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/MenuBarMenus.html#//apple_ref/doc/uid/20000957-CH29-SW1">OS X<span class="u-visible-to-screen-reader">(opens in new window)</span></a></li>
-              <li><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb226797(v=vs.85).aspx">Windows<span class="u-visible-to-screen-reader">(opens in new window)</span></a></li>
-              <li><a href="https://developer.gnome.org/hig/stable/menu-bars.html.en">Linux<span class="u-visible-to-screen-reader">(opens in new window)</span></a></li>
+              <li><a href="https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/MenuBarMenus.html#//apple_ref/doc/uid/20000957-CH29-SW1">OS X<span class="u-visible-to-screen-reader">(在新窗口打开)</span></a></li>
+              <li><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb226797(v=vs.85).aspx">Windows<span class="u-visible-to-screen-reader">(在新窗口打开)</span></a></li>
+              <li><a href="https://developer.gnome.org/hig/stable/menu-bars.html.en">Linux<span class="u-visible-to-screen-reader">(在新窗口打开)</span></a></li>
             </ul>
           </div>
         </div>
@@ -43,20 +43,20 @@
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="context-menu-demo-toggle" class="js-container-target demo-toggle-button">Create a context menu
-          <div class="demo-meta u-avoid-clicks">Supports: Win, OS X, Linux <span class="demo-meta-divider">|</span> Process: Main</div>
+        <button id="context-menu-demo-toggle" class="js-container-target demo-toggle-button">创建关联菜单
+          <div class="demo-meta u-avoid-clicks">支持: Win, OS X, Linux <span class="demo-meta-divider">|</span> 进程: Main</div>
         </button>
         <div class="demo-box">
           <div class="demo-controls">
-            <button class="demo-button" id="context-menu">View Demo</button>
+            <button class="demo-button" id="context-menu">观看演示</button>
           </div>
-          <p>A context, or right-click, menu can be created with the <code>Menu</code> and <code>MenuItem</code> modules as well. You can right-click anywhere in this app or click the demo button to see an example context menu.</p>
+          <p>一个关联或者说右键(right-click)菜单可以通过 <code>Menu</code>和<code>MenuItem</code>模块来实现。你可以在这个程序的任何地方通过点击鼠标右键或者点击"观看演示"按钮看到这个样例管理菜单。</p>
 
-          <p>In this demo we use the <code>ipcRenderer</code> module to show the context menu when explicitly calling it from the renderer process.</p>
-          <p>See the full <a href="http://electron.atom.io/docs/api/web-contents/#event-context-menu">context-menu event documentation</a> for all the available properties.</p>
-          <h5>Main Process</h5>
+          <p>在这个演示中使用了<code>ipcRenderer</code>模块来在处理进程有明确调用时显示关联菜单。</p>
+          <p>查看完整的<a href="http://electron.atom.io/docs/api/web-contents/#event-context-menu">关联菜单事件文档</a>可以了解到所有有效属性。</p>
+          <h5>主进程</h5>
           <pre><code data-path="main-process/menus/context-menu.js"></pre></code>
-          <h5>Renderer Process</h5>
+          <h5>处理进程</h5>
           <pre><code data-path="renderer-process/menus/context-menu.js"></pre></code>
         </div>
       </div>
